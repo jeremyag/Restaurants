@@ -1,0 +1,11 @@
+@host = http://localhost
+@port = 5270
+@RestaurantsAPI_HostAddress = {{host}}:{{port}}
+
+GET {{RestaurantsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+ProjectUrl: $projectUrl}}
+Guid: {{$guid}}
+LocalDate: {{$datetime iso8601}}
+Random-int: {{$randomInt}}
+###
