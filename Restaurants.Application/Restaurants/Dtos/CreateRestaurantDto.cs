@@ -1,4 +1,5 @@
 ﻿using Restaurants.Domain.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace Restaurants.Application.Restaurants.Dtos;
 
