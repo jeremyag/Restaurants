@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Restaurants.Application;
+using Restaurants.Application.Restaurants.Dtos;
 
 namespace Restaurants.API.Controller;
 
@@ -28,5 +29,12 @@ public class RestaurantsController(
         }
 
         return Ok(restaurants);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] CreateRestaurantDto createRestaurantDto)
+    {
+        var id = await restaurantsService.Create(createRestaurantDto);
+        return CreatedAtAction(nameof(Get), new {id}, null);
     }
 }

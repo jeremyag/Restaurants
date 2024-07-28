@@ -35,4 +35,12 @@ public class RestaurantsService(
 
         return null;
     }
+
+    public async Task<int> Create(CreateRestaurantDto dto)
+    {
+        var restaurant = mapper.Map<Restaurant>(dto);
+        var id = await restaurantsRepository.Create(restaurant);
+
+        return id;
+    }
 }
