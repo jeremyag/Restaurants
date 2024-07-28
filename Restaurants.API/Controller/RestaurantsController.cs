@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Restaurants.Application;
 
 namespace Restaurants.API.Controller;
 
 [ApiController]
 [Route("api/restaurants")]
-public class RestaurantsController(IRestaurantsService restaurantsService) : ControllerBase
+public class RestaurantsController(
+    IRestaurantsService restaurantsService, IMapper mapper) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> GetAll()

@@ -1,10 +1,10 @@
-﻿using Restaurants.Domain.Entities;
+﻿using Restaurants.Application.Restaurants.Dtos;
 
 namespace Restaurants.Application
 {
     public interface IRestaurantsService
     {
-        Task<IEnumerable<Restaurant>> GetRestaurants();
-        Task<Restaurant>? GetRestaurantById(int id);
+        Task<IEnumerable<RestaurantDto>> GetRestaurants();
+        Task<RestaurantDto>? GetRestaurantById(int id);
     }
 }
