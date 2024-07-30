@@ -4,14 +4,14 @@ GET {{RestaurantsAPI_HostAddress}}/api/restaurants
 
 ###
 
-GET {{RestaurantsAPI_HostAddress}}/api/restaurants/3
+GET {{RestaurantsAPI_HostAddress}}/api/restaurants/5
 
 ###
 
 POST {{RestaurantsAPI_HostAddress}}/api/restaurants
 Content-Type: application/json
 {
-   "Name": "Test Restaurant",
+  "Name": "Test Restaurant 2",
   "Description": "A culinary experience like no other.",
   "Category": "Mexican",
   "HasDelivery": true,
